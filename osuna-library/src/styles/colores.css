@@ -1,0 +1,20 @@
+#root {
+    /* Primary */
+    --primary-100: #E7F3D8;
+    --primary-300: #B6DA8B;
+    --primary-500: #8BC547;
+    --primary-700: #588028;
+    --primary-900: #354E18;
+
+    --prim-100: #354E18;
+    --prim-700: #E7F3D8;
+  
+    /* Neutrals */
+    --neutral-50:  #E3E4E7;
+    --neutral-100: #E3E4E7;
+    --neutral-300: #C7CBC2;
+    --neutral-400: #808C73;
+    --neutral-600: #575B52;
+    --neutral-800: #333630;
+  }
+  

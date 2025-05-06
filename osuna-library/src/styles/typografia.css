@@ -1,0 +1,123 @@
+/* typography.css */
+.h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.h5 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.body {
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.body-s {
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.caption {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.overline {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.text-primary-100 {
+    color: var(--prim-100);
+}
+
+.text-primary-700 {
+    color: var(--prim-700);
+}
+
+.text-neutral-50 {
+    color: var(--neutral-50);
+}
+
+.text-neutral-100 {
+    color: var(--neutral-100);
+}
+
+.text-neutral-300 {
+    color: var(--neutral-300);
+}
+
+.text-neutral-400 {
+    color: var(--neutral-400);
+}
+
+.text-neutral-600 {
+    color: var(--neutral-600);
+}
+
+.text-neutral-800 {
+    color: var(--neutral-800);
+}
+
+.bg-primary-100 {
+    background-color: var(--primary-100);
+}
+
+.bg-primary-300 {
+    background-color: var(--primary-300);
+}
+
+.bg-primary-500 {
+    background-color: var(--primary-500);
+}
+
+.bg-primary-700 {
+    background-color: var(--primary-700);
+}
+
+.bg-primary-900 {
+    background-color: var(--primary-900);
+}
+
+.bg-neutral-50 {
+    background-color: var(--neutral-50);
+}
+
+.bg-neutral-100 {
+    background-color: var(--neutral-100);
+}
+
+.bg-neutral-300 {
+    background-color: var(--neutral-300);
+}
+
+.bg-neutral-400 {
+    background-color: var(--neutral-400);
+}
+
+.bg-neutral-600 {
+    background-color: var(--neutral-600);
+}
+
+.bg-neutral-800 {
+    background-color: var(--neutral-800);
+}
