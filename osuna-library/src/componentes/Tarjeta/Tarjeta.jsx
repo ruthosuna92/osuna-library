@@ -2,50 +2,40 @@ import './Tarjeta.css'
 import favFilled from '../../assets/images/icons/favorite-filled.svg'
 import favEmpty from '../../assets/images/icons/favorite-empty.svg'
 import checkIcon from '../../assets/images/icons/check.svg'
+import avatarPlaceholder from '../../assets/images/placeholders/avatar_placeholder.jpg'
 import { useState } from 'react'
 
-function Tarjeta({ onFavorite, character }) {
+function Tarjeta({ onFavorite, character, onClick }) {
+
+    if ( !character ){
+        character = {
+            image: avatarPlaceholder,
+            name: "Unknown",
+            status: "Uknown",
+            species: "Unknown",
+            origin: {
+                name: "Unknown",
+            },
+            location: {
+                name: "Unknown",
+            },
+        }
+    }
     let { image, name, species, status, origin, location } = character
 
     const [isFav, setIsFav] = useState(false)
 
-    const handleClick = () => {
+    const handleFavorite = (e) => {
+        e.stopPropagation();
         setIsFav(!isFav)
         if (onFavorite) onFavorite(!isFav) // Emitir el evento al padre
     }
 
-
-
-    // let character = {
-    //     id: 1,
-    //     name: "Rick Sanchez",
-    //     status: "Alive",
-    //     species: "Human",
-    //     type: "",
-    //     gender: "Male",
-    //     origin: {
-    //       name: "Earth",
-    //       url: "https://rickandmortyapi.com/api/location/1"
-    //     },
-    //     location: {
-    //       name: "Earth",
-    //       url: "https://rickandmortyapi.com/api/location/20"
-    //     },
-    //     image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-    //     episode: [
-    //       "https://rickandmortyapi.com/api/episode/1",
-    //       "https://rickandmortyapi.com/api/episode/2",
-    //       // ...
-    //     ],
-    //     url: "https://rickandmortyapi.com/api/character/1",
-    //     created: "2017-11-04T18:48:46.250Z"
-    //   }
-
     return (
-        <div className="tarjeta">
+        <div className="tarjeta" onClick={onClick}>
             <div className='imagen-tarjeta-contenedor'>
                 <img className='imagen-tarjeta' src={image} alt={name} />
-                <button className="fav-button" onClick={handleClick}>
+                <button className="fav-button" onClick={handleFavorite}>
                     {isFav ? <img src={favFilled} alt="Personaje favorito" /> : <img src={favEmpty} alt="Personaje no es favorito" />}
 
                 </button>

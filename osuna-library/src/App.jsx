@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-    <Tarjeta favorite={favorite} character={character} onFavorite={handleFavorite} />
+    <Tarjeta onClick={() => console.log('clicked!')}/>
     </>
   )
 }

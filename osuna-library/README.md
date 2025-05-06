@@ -1,12 +1,69 @@
-# React + Vite
+🧩 Osuna Library
+Librería de componentes React reutilizables.
+Incluye componentes listos para usar como Tarjeta, diseñados para interfaces modernas y dinámicas.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Tecnologías
+⚡ Vite – Bundler ultrarrápido y servidor de desarrollo.
 
-Currently, two official plugins are available:
+⚛️ React – Librería para construir interfaces de usuario.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎨 CSS Modules – Estilos encapsulados por componente.
 
-## Expanding the ESLint configuration
+🧪 Vitest – Testing rápido y liviano para Vite.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📦 Instalación
+
+Opción 1: Clonar el proyecto (modo desarrollo)
+
+git clone https://github.com/ruthosuna92/osuna-library
+cd osuna-library
+npm install
+npm run dev
+Abre tu navegador en http://localhost:5173
+
+Opción 2: Usar como librería desde npm
+Instala el paquete:
+
+npm install @osuna-ale/osuna-library
+Importa y utiliza el componente:
+
+
+```import { Tarjeta } from '@osuna-ale/osuna-library'
+
+<Tarjeta
+  character={{
+    image: 'https://example.com/image.jpg',
+    name: 'Nombre',
+    status: 'Alive',
+    species: 'Humano',
+    origin: { name: 'Planeta X' },
+    location: { name: 'Lugar Y' }
+  }}
+  onFavorite={(isFav) => console.log('Favorito:', isFav)}
+  onClick={() => console.log('Click en la tarjeta')}
+/>```
+⚠️ Si no se pasa la prop character, se renderiza un personaje por defecto con valores "Unknown".
+
+🛠 Scripts disponibles
+
+Comando	Descripción
+npm run dev	Inicia el servidor de desarrollo local
+npm run build	Genera la build para producción en /dist
+npm run preview	Previsualiza la app de producción localmente
+npm run lint	Ejecuta el linter con ESLint
+
+📁 Estructura del proyecto
+
+bash
+Copy
+Edit
+src/
+├── assets/            # Imágenes, íconos, etc.
+├── componentes/       # Componentes reutilizables (incluye Tarjeta)
+├── App.jsx            # Componente raíz
+├── main.jsx           # Punto de entrada
+
+🧩 Componentes disponibles
+
+Componente	Descripción
+Tarjeta	Muestra información de un personaje, incluyendo nombre, estado, especie, lugar de origen, lugar actual y botón de favorito.
